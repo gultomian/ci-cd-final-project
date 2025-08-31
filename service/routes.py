@@ -31,10 +31,6 @@ def index():
         url=url_for("list_counters", _external=True),
     )
 
-
-############################################################
-# List counters
-############################################################
 @app.route("/counters", methods=["GET"])
 def list_counters():
     """Lists all counters"""
@@ -44,10 +40,8 @@ def list_counters():
 
     return jsonify(counters)
 
-
-############################################################
 # Create counters
-############################################################
+
 @app.route("/counters/<name>", methods=["POST"])
 def create_counters(name):
     """Creates a new counter"""
